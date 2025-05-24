@@ -1,6 +1,10 @@
 /*
 ===== Global Attributes =====
+
  */
+
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
 
 * {
     margin-left: 2%;
@@ -17,7 +21,7 @@ title, h1, h2, h3 {
 }
 
 h1 {
-    font-size: 24px; /* 3em; */
+    font-size: 30px; /* 3em; */
     line-height: 50px; /* 1.25em; */
     margin-top: 0.5em;
     margin-bottom: 0;
@@ -27,16 +31,18 @@ h2 {
     font-size: 20px; /* 3.5em; */
     line-height: 25px; /* 1.24em; */
     margin: 0.5em auto 0.5em ;
+    color: #0f75bd;
 }
 
 h3 {
     font-size: 16px; /* 3.5em; */
     line-height: 25px; /* 1.24em; */
     margin: 0.5em auto 0.5em auto;
+    color: #0f75bd;
 }
 
 p {
-    font-size: 14px; /* 2em; */
+    font-size: 16px; /* 2em; */
     font-family: 'Playfair Display', serif;
     font-weight: normal;
     line-height: 20px;
@@ -44,7 +50,7 @@ p {
 
 ul {
     font-family: 'Playfair Display', serif;
-    color: #0f75bd;
+    /* color: #0f75bd; */
 }
 
 /*
