@@ -8,17 +8,26 @@ class Header extends HTMLElement {
 
     this.innerHTML = `
       <style>
-        .logo-name {
-          font-size: 50px;
-          text-align: left;
-          display: inline;
-        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 10px 10px 0px;
+            background-color: white;
+          }
+
+          .logo-name {
+            font-size: 40px;
+            margin: 0;
+          }
+
         .main-navigation {
+          align-items: center;
           background-color: white;
           display: block;
           height: 50px;
           width: 100%;
-          margin-top: 1%;
+          margin-top: 5%;
         }
         .main-navigation li {
           list-style-type: none;
@@ -34,13 +43,15 @@ class Header extends HTMLElement {
           text-align: center;
         }
         .main-navigation a.active {
-          background-color: #0f75bd;
-          color: white;
+          background: white;
+          color: #0f75bd;
+          border: 2px solid #0f75bd;
+          border-radius: 0px;
         }
         .main-navigation a:hover:not(.active) {
-          background: #808185;
-          color: white;
-          transition: .2s color;
+          background: white;
+          color: #0f75bd;
+          transition: .1s color;
         }
       </style>
       <header>
@@ -58,3 +69,4 @@ class Header extends HTMLElement {
 }
 
 customElements.define('header-component', Header);
+
