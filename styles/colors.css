@@ -1,0 +1,12 @@
+/*
+
+colors.css
+
+lm = light mode
+dm = dark mode
+
+*/
+:root {
+  --lm-royal-blue: #0f75bd;
+  --lm-grey: #D6D6D6;
+}
