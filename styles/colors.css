@@ -1,12 +1,12 @@
 /*
-
 colors.css
 
 lm = light mode
 dm = dark mode
-
 */
+
 :root {
-  --lm-royal-blue: #0f75bd;
-  --lm-grey: #D6D6D6;
+  --lm-primary-blue: #0f75bd;
+  --lm-secondary-blue: #1A9FD4;
+  --lm-teritary-blue: #0A2494;
 }

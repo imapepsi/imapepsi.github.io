@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curriculum Vitae</title>
-    <link href="styles/main_styles.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
 </head>
 <body>
 <navigation-component></navigation-component>
@@ -30,7 +30,7 @@
 
         <div class="cv-item">
             <h3>Research Assistant</h3>
-            <div class="date">Apr 2024 - Sep 2024 </div>
+            <div class="date">Apr 2023 - Sep 2024 </div>
             <div class="company">Brigham Young University</div>
             <div class="company">Deep Representations and Architectures for Generative Systems and Natural Language Understanding (DRAGN)</div>
             <p>Investigated the potential of AI to predict student learning outcomes</p>
@@ -84,7 +84,7 @@
         <h2>Skills</h2>
         <div class="cv-item">
             <h3>Programming Languages</h3>
-            <p>Dart, Java, Python, C++</p>
+            <p>Dart, Java, Python, C++, HTML, CSS</p>
         </div>
         <div class="cv-item">
             <h3>Frameworks & Libraries</h3>
@@ -107,34 +107,5 @@
 <script src="components/hamburger_menu.js"></script>
 <script src="components/navigation.js"></script>
 
-<!--This script below is for if you want all web pages in 1 html file-->
-<!--<script>-->
-<!--    // Page navigation functionality-->
-<!--    const navLinks = document.querySelectorAll('.nav-link');-->
-<!--    const pages = document.querySelectorAll('.page');-->
-
-<!--    navLinks.forEach(link => {-->
-<!--        link.addEventListener('click', (e) => {-->
-<!--            e.preventDefault();-->
-
-<!--            // Remove active class from all nav links and pages-->
-<!--            navLinks.forEach(nl => nl.classList.remove('active'));-->
-<!--            pages.forEach(page => page.classList.remove('active'));-->
-
-<!--            // Add active class to clicked nav link-->
-<!--            link.classList.add('active');-->
-
-<!--            // Show corresponding page-->
-<!--            const targetPage = link.getAttribute('data-page');-->
-<!--            document.getElementById(targetPage).classList.add('active');-->
-<!--        });-->
-<!--    });-->
-
-<!--    // Contact form submission-->
-<!--    document.querySelector('form').addEventListener('submit', (e) => {-->
-<!--        e.preventDefault();-->
-<!--        alert('Thank you for your message! I\'ll get back to you soon.');-->
-<!--    });-->
-<!--</script>-->
 </body>
 </html>
