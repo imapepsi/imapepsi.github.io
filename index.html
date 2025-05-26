@@ -1,39 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="styles/main.css" rel="stylesheet">
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+<!--    <link href="styles/main.css" rel="stylesheet">-->
 
-    <title>Mia McGuire</title>
-    <script src="components/header.js" type="text/javascript" defer></script>
-</head>
-<body>
-    <header-component></header-component>
+<!--    <title>Mia McGuire</title>-->
+<!--    <script src="components/header.js" type="text/javascript" defer></script>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <header-component></header-component>-->
 
-    <div>
-        <h2>A Little About Myself</h2>
-        <p>
-            My life is all about learning new things; I’ll dive into any area that catches my interest. I love legos,
-            stop motion animation, drawing, yo-yo tricks, budgeting, movies, art museums, books, developing mobile apps,
-            and more. When I began programming in my senior year of high school, I figured out how to replicate my favorite
-            math magic trick in Python. That’s when I realized that computer science (CS) could be applied in any area I wanted.
-            I was hooked.
-        </p>
-        <p>
-            During my freshman year at BYU, I worked as a programmer for the Information Technology department. Later,
-            I became a teaching assistant for three different CS classes, teaching weekly recitation sessions for CS 111 (Intro to CS),
-            CS 236 (Discrete Structures), and CS 202 (Intro to Software Engineering).
-        </p>
-        <p>
-            Currently, I work in the Social Technology Privacy Lab under Dr. Xinru Page, where I’m developing a mobile app
-            to help young adults with autism learn how to use social media. The app gamifies social media lessons into a self-paced course.
+<!--    <div class="hamburger">-->
+<!--        <span></span>-->
+<!--        <span></span>-->
+<!--        <span></span>-->
+<!--    </div>-->
 
-            Using CS to help people is incredibly fulfilling, and I plan to become a research professor. It’s the best path
-            for me to do what I love—learning and creating tech that makes a difference.
-        </p>
-    </div>
+<!--    <div>-->
+<!--        <h2>A Little About Myself</h2>-->
+<!--        <p>-->
+<!--            My life is all about learning new things; I’ll dive into any area that catches my interest. I love legos,-->
+<!--            stop motion animation, drawing, yo-yo tricks, budgeting, movies, art museums, books, developing mobile apps,-->
+<!--            and more. When I began programming in my senior year of high school, I figured out how to replicate my favorite-->
+<!--            math magic trick in Python. That’s when I realized that computer science (CS) could be applied in any area I wanted.-->
+<!--            I was hooked.-->
+<!--        </p>-->
+<!--        <p>-->
+<!--            During my freshman year at BYU, I worked as a programmer for the Information Technology department. Later,-->
+<!--            I became a teaching assistant for three different CS classes, teaching weekly recitation sessions for CS 111 (Intro to CS),-->
+<!--            CS 236 (Discrete Structures), and CS 202 (Intro to Software Engineering).-->
+<!--        </p>-->
+<!--        <p>-->
+<!--            Currently, I work in the Social Technology Privacy Lab under Dr. Xinru Page, where I’m developing a mobile app-->
+<!--            to help young adults with autism learn how to use social media. The app gamifies social media lessons into a self-paced course.-->
+
+<!--            Using CS to help people is incredibly fulfilling, and I plan to become a research professor. It’s the best path-->
+<!--            for me to do what I love—learning and creating tech that makes a difference.-->
+<!--        </p>-->
+<!--    </div>-->
 
 <!--    <div>-->
 <!--        <h2>Work Experience</h2>-->
@@ -44,8 +50,311 @@
 
 <!--    <footer>-->
 <!--        <h2>Contact</h2>-->
-<!--&lt;!&ndash;        <p>miaseppi@gmail.com</p>&ndash;&gt;-->
+<!--        <p>miaseppi@gmail.com</p>-->
 <!--    </footer>-->
 
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mia McGuire Portfolio</title>
+    <link href="styles/main_styles.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="#" class="nav-logo">Mia McGuire</a>
+
+        <ul class="nav-menu">
+            <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+            <li><a href="#" class="nav-link" data-page="cv">CV/Resume</a></li>
+            <li><a href="#" class="nav-link" data-page="projects">Projects</a></li>
+            <li><a href="#" class="nav-link" data-page="contact">Contact</a></li>
+        </ul>
+
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+<!-- Home Page -->
+<div id="home" class="page active">
+    <div class="hero">
+        <div class="profile-image">
+            Your Photo Here
+        </div>
+        <h1>Mia McGuire</h1>
+        <p class="subtitle">Computer Science PhD Student</p>
+    </div>
+
+    <div class="bio">
+        <h2>About Me</h2>
+        <p>
+        <p> Welcome to my portfolio! I'm a PhD student studying Human-Computer Interaction (HCI), with a focus on how
+        autistic individuals engage with social media. My research explores ways to design more inclusive, supportive
+        online spaces that empower neurodiverse users to connect, express themselves, and thrive in digital environments.
+        </p>
+<!--        <p>-->
+<!--            I have experience working with a variety of technologies including Flutter, Python, JavaScript, React, and more. -->
+<!--            I'm especially passionate about building tools and interfaces that are accessible, user-centered, and grounded -->
+<!--            in real-world needs—particularly in the context of social communication and digital well-being.-->
+<!--        </p>-->
+        <p>
+            When I'm not doing research, you can find me exploring new technologies, developing games, or spending time with my family.
+            I believe in the power of technology to make a positive impact on people's lives.
+        </p>
+    </div>
+</div>
+
+<!-- CV/Resume Page -->
+<div id="cv" class="page">
+    <h1 class="page-title">CV / Resume</h1>
+
+    <div class="cv-section">
+        <h2>Experience</h2>
+
+        <div class="cv-item">
+            <h3>Research Assistant</h3>
+            <div class="date">May 2024 - Present</div>
+            <div class="company">Brigham Young University</div>
+            <div class="company">Social Technology and Privacy Lab (STaPL)</div>
+
+            <p>Implementing mobile social media education app with Flutter</p>
+            <p>Designing game flow and layout of gamified educational app</p>
+            <p>Providing other student researchers feedback in visual and social media literacy educational content creation</p>
+            <p>Assisted in conducting live classroom-based version of social media literacy educational intervention</p>
+        </div>
+
+        <div class="cv-item">
+            <h3>Research Assistant</h3>
+            <div class="date">Apr 2024 - Sep 2024 </div>
+            <div class="company">Brigham Young University</div>
+            <div class="company">Deep Representations and Architectures for Generative Systems and Natural Language Understanding (DRAGN)</div>
+            <p>Investigated the potential of AI to predict student learning outcomes</p>
+            <p>Developed and taught Python lessons to participants during user sessions</p>
+            <p>Led participant recruitment and managed study logistics</p>
+            <p>Assisted in implementing AI models to analyze video recordings of sessions and predict student performance on follow-up programming exercises and quizzes</p>
+        </div>
+
+        <div class="cv-item">
+            <h3>Section Lead Teaching Assistant</h3>
+            <div class="date">Jan 2022 - Aug 2023</div>
+            <div class="company">Brigham Young University</div>
+            <div class="company">Computer Science Department</div>
+            <p>Taught weekly recitation section for:</p>
+            <ul class="indented-list">
+                <li>CS 111: Intro to Computer Science</li>
+                <li>CS 236: Discrete Structures</li>
+                <li>CS 202: Lab Intro to Software Engineering</li>
+            </ul>
+            <p>Tutored students in one-on-one scenarios</p>
+            <p>Wrote and graded exams</p>
+            <p>Integrated SpaCy and Neo4J into a TA Discord chatbot with Python</p>
+        </div>
+
+        <div class="cv-item">
+            <h3>Computer Programmer</h3>
+            <div class="date">Jun 2019 - Jun 2020</div>
+            <div class="company">Brigham Young University</div>
+            <div class="company">Office of Information Technology</div>
+            <p>Refactored Locker Rental service</p>
+            <p>Implemented front-end & back-end connections for paid parking services</p>
+            <p>Replaced ktor client with OkHttp for Campus Card, Customer Account, and Student</p>
+        </div>
+    </div>
+
+    <div class="cv-section">
+        <h2>Education</h2>
+        <div class="cv-item">
+            <h3>PhD in Computer Science</h3>
+            <div class="date">Fall 2025 - Present</div>
+            <div class="company">Brigham Young University</div>
+        </div>
+        <div class="cv-item">
+            <h3>BS in Computer Science with an Emphasis in Animation and Games</h3>
+            <div class="date">Fall 2019 - Spring 2025</div>
+            <div class="company">Brigham Young University</div>
+        </div>
+    </div>
+
+    <div class="cv-section">
+        <h2>Skills</h2>
+        <div class="cv-item">
+            <h3>Programming Languages</h3>
+            <p>Dart, Java, Python, C++</p>
+        </div>
+        <div class="cv-item">
+            <h3>Frameworks & Libraries</h3>
+            <p>Flutter</p>
+        </div>
+        <div class="cv-item">
+            <h3>Tools & Technologies</h3>
+            <p>Figma, Git, JetBrains IDE's, Android Studio, Unreal Engine, Godot</p>
+        </div>
+    </div>
+</div>
+
+<!-- Projects Page -->
+<div id="projects" class="page">
+    <h1 class="page-title">My Projects</h1>
+    <div class="hero">
+        <p class="subtitle">Still under construction, below is placeholder data</p>
+    </div>
+    <div class="projects-grid">
+        <div class="project-card">
+            <h3>E-Commerce Platform</h3>
+            <p>A full-stack e-commerce solution built with React and Node.js. Features include user authentication, payment processing, and admin dashboard.</p>
+            <div class="project-tech">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">Stripe API</span>
+            </div>
+            <div class="project-links">
+                <a href="#" class="project-link">Live Demo</a>
+                <a href="#" class="project-link">GitHub</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <h3>Weather Dashboard</h3>
+            <p>A responsive weather application that displays current conditions and forecasts. Built with vanilla JavaScript and integrates with weather APIs.</p>
+            <div class="project-tech">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">Weather API</span>
+                <span class="tech-tag">Chart.js</span>
+            </div>
+            <div class="project-links">
+                <a href="#" class="project-link">Live Demo</a>
+                <a href="#" class="project-link">GitHub</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <h3>Task Management App</h3>
+            <p>A productivity application for managing tasks and projects. Features drag-and-drop functionality and real-time updates.</p>
+            <div class="project-tech">
+                <span class="tech-tag">Vue.js</span>
+                <span class="tech-tag">Firebase</span>
+                <span class="tech-tag">Vuex</span>
+                <span class="tech-tag">CSS Grid</span>
+            </div>
+            <div class="project-links">
+                <a href="#" class="project-link">Live Demo</a>
+                <a href="#" class="project-link">GitHub</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <h3>Portfolio Website</h3>
+            <p>A responsive portfolio website showcasing my work and skills. Built with modern CSS techniques and vanilla JavaScript.</p>
+            <div class="project-tech">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Responsive Design</span>
+            </div>
+            <div class="project-links">
+                <a href="#" class="project-link">Live Demo</a>
+                <a href="#" class="project-link">GitHub</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Contact Page -->
+<div id="contact" class="page">
+    <h1 class="page-title">Get In Touch</h1>
+    <div class="hero">
+        <p class="subtitle">Still under construction, below is placeholder data</p>
+    </div>
+    <div class="contact-content">
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <div class="contact-item">
+                <strong>Email:</strong>
+                <span>your.email@example.com</span>
+            </div>
+            <div class="contact-item">
+                <strong>Phone:</strong>
+                <span>+1 (555) 123-4567</span>
+            </div>
+            <div class="contact-item">
+                <strong>Location:</strong>
+                <span>Your City, Country</span>
+            </div>
+            <div class="contact-item">
+                <strong>LinkedIn:</strong>
+                <span>linkedin.com/in/yourprofile</span>
+            </div>
+            <div class="contact-item">
+                <strong>GitHub:</strong>
+                <span>github.com/yourusername</span>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h2>Send Me a Message</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Link to external JavaScript file -->
+<script src="components/hamburger_menu.js"></script>
+<script>
+    // Page navigation functionality
+    const navLinks = document.querySelectorAll('.nav-link');
+    const pages = document.querySelectorAll('.page');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            // Remove active class from all nav links and pages
+            navLinks.forEach(nl => nl.classList.remove('active'));
+            pages.forEach(page => page.classList.remove('active'));
+
+            // Add active class to clicked nav link
+            link.classList.add('active');
+
+            // Show corresponding page
+            const targetPage = link.getAttribute('data-page');
+            document.getElementById(targetPage).classList.add('active');
+        });
+    });
+
+    // Contact form submission
+    document.querySelector('form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Thank you for your message! I\'ll get back to you soon.');
+    });
+</script>
 </body>
 </html>
