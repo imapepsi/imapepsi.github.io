@@ -2,123 +2,139 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="styles/main.css" rel="stylesheet">
-    <title>Experience</title>
-    <script src="components/header.js" type="text/javascript" defer></script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae</title>
+    <link href="styles/main_styles.css" rel="stylesheet">
 </head>
 <body>
-    <header-component></header-component>
+<navigation-component></navigation-component>
 
-    <h1>Education</h1>
+<!-- CV/Resume Page -->
+<div id="cv" class="page active">
+    <h1 class="page-title">CV / Resume</h1>
 
-    <div>
-        <h2>PhD Computer Science - Human Computer Interaction <span style="font-weight: normal">(Fall 2025 - Present)</span> </h2>
-        <p>
-            Computer Science Department
-            Brigham Young University<br>
-            Provo, UT<br>
-        </p>
+    <div class="cv-section">
+        <h2>Experience</h2>
+
+        <div class="cv-item">
+            <h3>Research Assistant</h3>
+            <div class="date">May 2024 - Present</div>
+            <div class="company">Brigham Young University</div>
+            <div class="company">Social Technology and Privacy Lab (STaPL)</div>
+
+            <p>Implementing mobile social media education app with Flutter</p>
+            <p>Designing game flow and layout of gamified educational app</p>
+            <p>Providing other student researchers feedback in visual and social media literacy educational content creation</p>
+            <p>Assisted in conducting live classroom-based version of social media literacy educational intervention</p>
+        </div>
+
+        <div class="cv-item">
+            <h3>Research Assistant</h3>
+            <div class="date">Apr 2024 - Sep 2024 </div>
+            <div class="company">Brigham Young University</div>
+            <div class="company">Deep Representations and Architectures for Generative Systems and Natural Language Understanding (DRAGN)</div>
+            <p>Investigated the potential of AI to predict student learning outcomes</p>
+            <p>Developed and taught Python lessons to participants during user sessions</p>
+            <p>Led participant recruitment and managed study logistics</p>
+            <p>Assisted in implementing AI models to analyze video recordings of sessions and predict student performance on follow-up programming exercises and quizzes</p>
+        </div>
+
+        <div class="cv-item">
+            <h3>Section Lead Teaching Assistant</h3>
+            <div class="date">Jan 2022 - Aug 2023</div>
+            <div class="company">Brigham Young University</div>
+            <div class="company">Computer Science Department</div>
+            <p>Taught weekly recitation section for:</p>
+            <ul class="indented-list">
+                <li>CS 111: Intro to Computer Science</li>
+                <li>CS 236: Discrete Structures</li>
+                <li>CS 202: Lab Intro to Software Engineering</li>
+            </ul>
+            <p>Tutored students in one-on-one scenarios</p>
+            <p>Wrote and graded exams</p>
+            <p>Integrated SpaCy and Neo4J into a TA Discord chatbot with Python</p>
+        </div>
+
+        <div class="cv-item">
+            <h3>Computer Programmer</h3>
+            <div class="date">Jun 2019 - Jun 2020</div>
+            <div class="company">Brigham Young University</div>
+            <div class="company">Office of Information Technology</div>
+            <p>Refactored Locker Rental service</p>
+            <p>Implemented front-end & back-end connections for paid parking services</p>
+            <p>Replaced ktor client with OkHttp for Campus Card, Customer Account, and Student</p>
+        </div>
     </div>
 
-    <br>
-
-    <div>
-        <h2>BS Computer Science with an Emphasis in Animation and Games <span style="font-weight: normal">(Fall 2019 - Spring 2025)</span> </h2>
-        <p>
-            Center of Animation
-            Brigham Young University<br>
-            Provo, UT<br>
-        </p>
+    <div class="cv-section">
+        <h2>Education</h2>
+        <div class="cv-item">
+            <h3>PhD in Computer Science</h3>
+            <div class="date">Fall 2025 - Present</div>
+            <div class="company">Brigham Young University</div>
+        </div>
+        <div class="cv-item">
+            <h3>BS in Computer Science with an Emphasis in Animation and Games</h3>
+            <div class="date">Fall 2019 - Spring 2025</div>
+            <div class="company">Brigham Young University</div>
+        </div>
     </div>
 
-    <br>
-
-    <h1>Work Experience</h1>
-
-    <div>
-        <h2>Research Assistant with Dr. Xinru Page  <span style="font-weight: normal">(May 2024 - Present)</span></h2>
-        <p>
-            Social Technology and Privacy Lab (STaPL)<br>
-            Brigham Young University<br>
-            Provo, UT<br>
-        </p>
-
-        <ul>
-            <li>Implementing mobile social media education app with Flutter</li>
-            <li>Designing gameflow and layout of gamified educational app</li>
-            <li>Providing other student researchers feedback in visual and social media literacy educational content creation</li>
-            <li>Assisting in conducting live classroom-based version of social media literacy educational intervention</li>
-        </ul>
+    <div class="cv-section">
+        <h2>Skills</h2>
+        <div class="cv-item">
+            <h3>Programming Languages</h3>
+            <p>Dart, Java, Python, C++</p>
+        </div>
+        <div class="cv-item">
+            <h3>Frameworks & Libraries</h3>
+            <p>Flutter</p>
+        </div>
+        <div class="cv-item">
+            <h3>Tools & Technologies</h3>
+            <p>Figma, Git, JetBrains IDE's, Android Studio, Unreal Engine, Godot</p>
+        </div>
     </div>
 
-    <br>
+    <div class="cv-section">
+        <h2>Publications</h2>
 
-    <div>
-        <h2>Research Assistant with Dr. Nancy Fulda <span style="font-weight: normal">(Apr 2023 - Sep 2024) </span> </h2>
-
-        <p>
-            Deep Representations and Architectures for Generative Systems and Natural Language Understanding (DRAGN)<br>
-            Brigham Young University<br>
-            Provo, UT<br>
-        </p>
-
-        <ul>
-            <li>Investigated the potential of AI to predict student learning outcomes</li>
-            <li>Developed and taught Python lessons to participants during user sessions</li>
-            <li>Led participant recruitment and managed study logistics</li>
-            <li>Assisted in implementing AI models to analyze video recordings of sessions and predict student performance on follow-up programming exercises and quizzes</li>
-        </ul>
     </div>
-
-    <br>
-
-    <div>
-        <h2>Section Lead Teaching Assistant <span style="font-weight: normal">(Jan 2022 - Aug 2023)</span> </h2>
-        <p>
-            Computer Science Department<br>
-            Brigham Young University<br>
-            Provo, UT<br>
-        </p>
-        <ul>
-            <li>Taught weekly recitation section for:
-                <ul>
-                    <li>CS 111: Intro to Computer Science</li>
-                    <li>CS 236: Discrete Structures</li>
-                    <li>CS 202: Lab Intro to Software Engineering</li>
-                </ul>
-            </li>
-            <li>Tutored students in one-on-one scenarios</li>
-            <li>Wrote and graded exams</li>
-            <li>Integrated SpaCy and Neo4J into a TA Discord chatbot with Python</li>
-        </ul>
-    </div>
-
-    <br>
-
-    <div>
-        <h2>Computer Programmer <span style="font-weight: normal">(Jun 2019 - Jun 2020)</span> </h2>
-        <p>
-            Office of Information Technology<br>
-            Brigham Young University<br>
-            Provo, UT<br>
-        </p>
-        <ul>
-            <li>Implemented front-end & back-end connections for paid parking services</li>
-            <li>Replaced ktor client with OkHttp for Campus Card, Customer Account, and Student</li>
-        </ul>
-    </div>
-
-    <br>
-    <br>
-
-<!--    <h1>Awards & Certifications</h1>-->
-
-<!--    <h1>Teaching</h1>-->
-
-<!--    <h1>Publications</h1>-->
+</div>
 
 
+<!-- Link to external JavaScript file -->
+<script src="components/hamburger_menu.js"></script>
+<script src="components/navigation.js"></script>
 
+<!--This script below is for if you want all web pages in 1 html file-->
+<!--<script>-->
+<!--    // Page navigation functionality-->
+<!--    const navLinks = document.querySelectorAll('.nav-link');-->
+<!--    const pages = document.querySelectorAll('.page');-->
+
+<!--    navLinks.forEach(link => {-->
+<!--        link.addEventListener('click', (e) => {-->
+<!--            e.preventDefault();-->
+
+<!--            // Remove active class from all nav links and pages-->
+<!--            navLinks.forEach(nl => nl.classList.remove('active'));-->
+<!--            pages.forEach(page => page.classList.remove('active'));-->
+
+<!--            // Add active class to clicked nav link-->
+<!--            link.classList.add('active');-->
+
+<!--            // Show corresponding page-->
+<!--            const targetPage = link.getAttribute('data-page');-->
+<!--            document.getElementById(targetPage).classList.add('active');-->
+<!--        });-->
+<!--    });-->
+
+<!--    // Contact form submission-->
+<!--    document.querySelector('form').addEventListener('submit', (e) => {-->
+<!--        e.preventDefault();-->
+<!--        alert('Thank you for your message! I\'ll get back to you soon.');-->
+<!--    });-->
+<!--</script>-->
 </body>
 </html>
