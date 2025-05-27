@@ -6,7 +6,26 @@ dm = dark mode
 */
 
 :root {
-  --lm-primary-blue: #0f75bd;
+  --lm-primary-blue: #0F75BD;
   --lm-secondary-blue: #1A9FD4;
   --lm-teritary-blue: #0A2494;
+
+  --lm-dark-grey: #333333;
+  --lm-grey: #666666;
+  --lm-light-grey: #CCCCCC;
+  --lm-off-white: #EEEEEE;
+  --lm-white: #F8F8F8;
+
+
+  --lm-background-primary: rgba(255, 255, 255, 0.95);
+  --lm-lighter-shadow: rgba(0, 0, 0, 0.1);
+  --lm-darker-shadow: rgba(0, 0, 0, 0.3);
+
+
+  --lm-shadow-blue: rgba(15, 117, 189, 0.3);
+  --lm-medium-shadow-blue: rgba(15, 117, 189, 0.1);
+  --lm-light-shadow-blue: rgba(15, 117, 189, 0.06);
+
+  --lm-image-border: rgba(255, 255, 255, 0.3);
+
 }
