@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "slug": "why-a-phd",
+      "file": "2025-05-25.md",
+      "title": "Why a PhD?",
+      "date": "May 25, 2025",
+      "dateSort": "2025-05-25",
+      "author": "Mia McGuire",
+      "tags": ["Personal", "PhD", "Motherhood"],
+      "excerpt": "My story becoming a PhD Student"
+    },
+    {
+      "slug": "motherhood-and-research",
+      "file": "2025-06-01.md",
+      "title": "Motherhood and Research",
+      "date": "June 01, 2025",
+      "dateSort": "2025-06-01",
+      "author": "Mia McGuire",
+      "tags": ["Personal", "PhD", "Motherhood"],
+      "excerpt": "How I manage motherhood and my research"
+    }
+  ]
+}
