@@ -27,7 +27,6 @@ async function loadBlogPosts() {
         // Sort posts by date (newest first)
         blogPostList.sort((a, b) => new Date(b.dateSort) - new Date(a.dateSort));
 
-        console.log(blogPostList);
         // Update current year to the most recent post's year
         if (blogPostList.length > 0) {
             currentYear = blogPostList[0].year;
@@ -40,8 +39,6 @@ async function loadBlogPosts() {
                 }
             });
         }
-
-        console.log('Loaded blog posts for time machine:', blogPostList);
 
         // Render blog posts in the time machine
         renderBlogPosts();
@@ -118,11 +115,11 @@ function renderBlogPosts() {
             </div>
             <p>${post.excerpt}</p>
             ${post.tags && post.tags.length > 1 ? `
-                <div style="margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                    ${post.tags.slice(1).map(tag => `
-                        <span style="background: rgba(102, 126, 234, 0.1); color: #667eea; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.8rem;">${tag}</span>
-                    `).join('')}
-                </div>` : ''}
+                <div class="blog-tags">
+                    ${post.tags.slice(1).map(tag => `<span class="blog-tag">${tag}</span>`).join('')}
+                </div>` 
+                : ''
+            }
         </div>
     `).join('');
 

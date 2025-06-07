@@ -16,29 +16,34 @@
         <h1 class="page-title">Life of a PhD Mom</h1>
     </div>
 
-    <div class="blog-navigation">
-        <div class="time-machine">
-            <span style="color: var(--lm-primary-blue); font-weight: 600;">Time Machine:</span>
-            <div class="year-selector active" onclick="filterByYear(2025)">2025</div>
-            <div class="year-selector" onclick="filterByYear(2024)">2024</div>
-            <div class="year-selector" onclick="filterByYear('all')">All</div>
+    <div class="blog-layout">
+        <div class="side-column">
+            <div class="blog-navigation">
+                <span style="color: var(--lm-primary-blue); font-weight: 600;">Time Machine:</span>
+                <div class="time-machine">
+                    <div class="year-selector active" onclick="filterByYear(2025)">2025</div>
+                    <div class="year-selector" onclick="filterByYear(2024)">2024</div>
+                    <div class="year-selector" onclick="filterByYear('all')">All</div>
+                </div>
+
+                <br>
+
+                <div id="blog-posts">
+                    Loading blog posts...
+                </div>
+            </div>
+
+            <div class="blog-list" id="recentPostsContainer">
+                <div class="loading">Loading recent posts...</div>
+            </div>
         </div>
 
-        <div id="blog-posts">
-            Loading blog posts...
+        <div id="blogContainer">
+            <div class="loading">Loading latest blog post...</div>
         </div>
-    </div>
 
-    <div id="blogContainer">
-        <div class="loading">Loading latest blog post...</div>
-    </div>
 
-    <!-- Recent Posts Section - Dynamic -->
-    <div class="blog-list" id="recentPostsContainer">
-        <!-- Recent posts will be loaded dynamically here -->
-        <div class="loading">Loading recent posts...</div>
     </div>
-
 </div>
 
 <!-- Link to external JavaScript file -->

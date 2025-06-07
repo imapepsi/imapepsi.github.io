@@ -17,6 +17,7 @@ dm = dark mode
   --lm-white: #F8F8F8;
 
 
+  --lm-background-secondary: rgba(26, 159, 212, 0.1);
   --lm-background-primary: rgba(255, 255, 255, 0.95);
   --lm-lighter-shadow: rgba(0, 0, 0, 0.1);
   --lm-darker-shadow: rgba(0, 0, 0, 0.3);
