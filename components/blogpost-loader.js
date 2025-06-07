@@ -1,19 +1,13 @@
-// import { marked } from 'https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js';
-
-// Real blog post loader - replaces mock data
+// Enhanced blog post loader with recent posts functionality
 let blogPosts = {};
 
 // Load blog posts index
 async function loadBlogIndex() {
     try {
-        const response = await fetch('./data/blog-index.json'); // Adjust path as needed
-
-        // console.log('Response status:', response.status);
+        const response = await fetch('./data/blog-index.json');
 
         if (!response.ok) {
-
             throw new Error(`Failed to load blog index: ${response.status} ${response.statusText}`);
-
         }
         const data = await response.json();
 
@@ -41,14 +35,11 @@ async function loadMarkdownFile(slug) {
         const response = await fetch(`./blog_posts/${post.file}`);
 
         if (!response.ok) {
-
             throw new Error(`Failed to load blog post: ${response.status} ${response.statusText} | ${post.file}`);
-
         }
 
         const markdown = await response.text();
 
-        // Return post data with loaded content
         return {
             ...post,
             content: markdown
@@ -63,9 +54,6 @@ async function loadMarkdownFile(slug) {
 function renderBlogPost(postData) {
     const container = document.getElementById('blogContainer');
 
-    // Parse markdown to HTML
-    // const htmlContent = marked.parse(postData.content);
-
     // Skip over the title in the markdown so I can insert some meta data
     const contentWithoutTitle = postData.content.replace(/^#\s+.+$/m, '');
     const htmlContent = marked.parse(contentWithoutTitle);
@@ -73,24 +61,98 @@ function renderBlogPost(postData) {
     // Create blog post HTML structure
     container.innerHTML = `
         <article class="blog-container">
-            <!--<div class="blog-meta">-->
-            <!--    <div class="blog-date">${postData.date}</div>-->
-            <!--    <br>-->
-            <!--    ${postData.tags ? `-->
-
-            <!--    ` : ''}-->
-            <!--</div>-->
             <div class="blog-content">
-                  <h1 style="color: black; margin-top: 0; margin-bottom: 0.5rem; font-size: 2.5rem;">${postData.title}</h1>
+                  <h1 style="color: var(--lm-dark-grey); margin-top: 0; margin-bottom: 0.5rem; font-size: 2.3rem;">${postData.title}</h1>
                   <div class="blog-date">${postData.date}</div>
                   <div class="blog-tags">
                     ${postData.tags.map(tag => `<span class="blog-tag">${tag}</span>`).join('')}
                   </div>                
                   ${htmlContent}
-                
             </div>
         </article>
     `;
+}
+
+// NEW: Function to extract excerpt from markdown content
+function extractExcerpt(content, maxLength = 150) {
+    // Remove markdown syntax and get plain text
+    const plainText = content
+        .replace(/^#\s+.+$/m, '') // Remove title
+        .replace(/[#*`_~]/g, '') // Remove markdown formatting
+        .replace(/\n+/g, ' ') // Replace newlines with spaces
+        .trim();
+
+    if (plainText.length <= maxLength) {
+        return plainText;
+    }
+
+    // Find the last complete word within the limit
+    const truncated = plainText.substring(0, maxLength);
+    const lastSpaceIndex = truncated.lastIndexOf(' ');
+
+    return truncated.substring(0, lastSpaceIndex) + '...';
+}
+
+// NEW: Function to render recent posts
+async function renderRecentPosts(limit = 3) {
+    const container = document.getElementById('recentPostsContainer');
+
+    if (!container) {
+        console.error('Recent posts container not found');
+        return;
+    }
+
+    try {
+        // Show loading state
+        container.innerHTML = '<div class="loading">Loading recent posts...</div>';
+
+        // Load blog index if not already loaded
+        if (Object.keys(blogPosts).length === 0) {
+            await loadBlogIndex();
+        }
+
+        // Get all posts and sort by date
+        const posts = Object.values(blogPosts);
+        const sortedPosts = posts.sort((a, b) => {
+            return new Date(b.dateSort) - new Date(a.dateSort);
+        });
+
+        // Get the most recent posts
+        const recentPosts = sortedPosts.slice(0, limit);
+
+        // Load content for each recent post to extract excerpts
+        const postsWithExcerpts = await Promise.all(
+            recentPosts.map(async (post) => {
+                try {
+                    const postData = await loadMarkdownFile(post.slug);
+                    const excerpt = post.excerpt || extractExcerpt(postData.content);
+                    return { ...post, excerpt };
+                } catch (error) {
+                    console.error(`Error loading post ${post.slug}:`, error);
+                    return { ...post, excerpt: 'Excerpt not available.' };
+                }
+            })
+        );
+
+        // Render the recent posts
+        container.innerHTML = `
+            <h2>Recent Posts</h2>
+            ${postsWithExcerpts.map(post => `
+                <div class="blog-item">
+                    <h3>${post.title}</h3>
+                    <div class="blog-excerpt">${post.excerpt}</div>
+                    <div class="blog-meta">
+                        <span class="blog-date">${post.date}</span>
+                        <a href="?post=${post.slug}" class="blog-read-more">Read More</a>
+                    </div>
+                </div>
+            `).join('')}
+        `;
+
+    } catch (error) {
+        console.error('Error rendering recent posts:', error);
+        container.innerHTML = '<div class="error">Failed to load recent posts</div>';
+    }
 }
 
 // Function to show loading state
@@ -162,13 +224,21 @@ window.addEventListener('load', async () => {
     const urlParams = new URLSearchParams(window.location.search);
     const slug = urlParams.get('post');
 
-    if (slug) {
-        await loadPostBySlug(slug);
-    } else {
-        await loadMostRecentPost();
+    // Always load recent posts first if container exists
+    await renderRecentPosts();
+
+    // Then handle individual post loading if blogContainer exists
+    const blogContainer = document.getElementById('blogContainer');
+    if (blogContainer) {
+        if (slug) {
+            await loadPostBySlug(slug);
+        } else {
+            await loadMostRecentPost();
+        }
     }
 });
 
 // Export functions for global use
 window.loadPost = loadPost;
 window.loadMostRecentPost = loadMostRecentPost;
+window.renderRecentPosts = renderRecentPosts;

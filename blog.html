@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog test</title>
+  <link href="styles/main.css" rel="stylesheet">
+</head>
+<body>
+
+<navigation-component></navigation-component>
+
+
+<div id="blog" class="page active">
+    <div class="blog-header">
+        <h1 class="page-title">Life of a PhD Mom</h1>
+    </div>
+
+    <div class="blog-navigation">
+        <div class="time-machine">
+            <span style="color: var(--lm-primary-blue); font-weight: 600;">Time Machine:</span>
+            <div class="year-selector active" onclick="filterByYear(2025)">2025</div>
+            <div class="year-selector" onclick="filterByYear(2024)">2024</div>
+            <div class="year-selector" onclick="filterByYear('all')">All</div>
+        </div>
+
+        <div id="blog-posts">
+            Loading blog posts...
+        </div>
+    </div>
+
+    <div id="blogContainer">
+        <div class="loading">Loading latest blog post...</div>
+    </div>
+
+    <!-- Recent Posts Section - Dynamic -->
+    <div class="blog-list" id="recentPostsContainer">
+        <!-- Recent posts will be loaded dynamically here -->
+        <div class="loading">Loading recent posts...</div>
+    </div>
+
+</div>
+
+<!-- Link to external JavaScript file -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+<script src="components/hamburger-menu.js"></script>
+<script src="components/navigation.js"></script>
+<script src="components/blogpost-loader.js"></script>
+<script src="components/blogpost-timemachine.js"></script>
+
+
+
+</body>
+</html>
+

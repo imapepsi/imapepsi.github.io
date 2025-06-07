@@ -19,6 +19,16 @@
       "author": "Mia McGuire",
       "tags": ["Personal", "PhD", "Motherhood"],
       "excerpt": "How I manage motherhood and my research"
+    },
+    {
+      "slug": "test-post",
+      "file": "2024-01-01.md",
+      "title": "Testing Post",
+      "date": "January 01, 2024",
+      "dateSort": "2024-01-01",
+      "author": "Mia McGuire",
+      "tags": ["PhD"],
+      "excerpt": "Test, test, test"
     }
   ]
 }
