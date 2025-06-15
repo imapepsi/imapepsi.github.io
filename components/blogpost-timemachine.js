@@ -110,8 +110,6 @@ function renderBlogPosts() {
             <h3>${post.title}</h3>
             <div class="blog-meta">
                 <span>${post.date}</span>
-                <span>${post.category}</span>
-                ${post.author ? `<span>by ${post.author}</span>` : ''}
             </div>
             <p>${post.excerpt}</p>
             ${post.tags && post.tags.length > 1 ? `
