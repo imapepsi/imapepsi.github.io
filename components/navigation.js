@@ -16,7 +16,7 @@ class Header extends HTMLElement {
                   <li><a href="cv-resume.html" class="nav-link ${currentPage === 'cv-resume.html' ? 'active' : ''}">CV/Resume</a></li>
                   <li><a href="my-projects.html" class="nav-link ${currentPage === 'my-projects.html' ? 'active' : ''}">Projects</a></li>
                   <li><a href="contact.html" class="nav-link ${currentPage === 'contact.html' ? 'active' : ''}">Contact</a></li>
-                  <li><a href="blog.html" class="nav-link ${currentPage === 'blog.html' ? 'active' : ''}">Blog</a></li>
+<!--                  <li><a href="blog.html" class="nav-link ${currentPage === 'blog.html' ? 'active' : ''}">Blog</a></li>-->
               </ul>
 
               <div class="hamburger">
