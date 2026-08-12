@@ -1,9 +1,12 @@
 let blogPostList = [];
-let currentYear = 2025;
+let currentYear = new Date().getFullYear();
 
 // Load blog posts from JSON file
 async function loadBlogPosts() {
     try {
+
+        // console.log("DEBUG: Load Blog Posts");
+
         // Use the same path as your blogpost-loader.js
         const response = await fetch('./data/blog-index.json');
         const data = await response.json();

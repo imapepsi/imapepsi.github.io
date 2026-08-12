@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mia McGuire Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Cream+Soda&family=Montserrat&display=swap" rel="stylesheet">
     <link href="styles/main.css" rel="stylesheet">
+
 </head>
 <body>
 <navigation-component></navigation-component>
@@ -26,9 +30,20 @@
         privacy practices so they can thrive in digital environments.
         </p>
         <p>
-            When I'm not doing research, you can find me reading, building with Legos, developing games, or spending time with my family.
+            When I'm not doing research, you can find me reading, developing mobile apps, or spending time with my family.
         </p>
     </div>
+
+
+    <footer class="site-footer" id="contact">
+        <footer>
+            <p>&copy; <span id="year"></span> Mia McGuire</p>
+        </footer>
+
+        <script>
+            document.getElementById("year").textContent = new Date().getFullYear();
+        </script>
+    </footer>
 </div>
 
 <!-- Link to external JavaScript file -->

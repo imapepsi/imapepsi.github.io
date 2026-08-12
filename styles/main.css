@@ -7,10 +7,17 @@
     box-sizing: border-box;
 }
 
+footer {
+    font-size: 0.8rem;
+    color: var(--lm-dark-grey);
+    text-align: center;
+    padding: 1rem 0;
+}
+
 body {
-    font-family: 'Open sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
-    background: linear-gradient(135deg, var(--lm-primary-blue) 0%, var(--lm-secondary-blue) 50%, var(--lm-teritary-blue) 100%);
+    background: var(--lm-page-bg);
     min-height: 100vh;
     color: var(--lm-dark-grey);
 }
@@ -42,7 +49,7 @@ body {
     font-weight: bold;
     color: var(--lm-dark-grey);
     text-decoration: none;
-    background: linear-gradient(30deg, var(--lm-primary-blue), var(--lm-secondary-blue));
+    background: linear-gradient(30deg, var(--lm-primary), var(--lm-primary-light));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -67,10 +74,10 @@ body {
 }
 
 .nav-link:hover, .nav-link.active {
-    background: linear-gradient(45deg, var(--lm-primary-blue), var(--lm-secondary-blue));
+    background: linear-gradient(45deg, var(--lm-accent-rose), var(--lm-accent-rose-dark));
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px var(--lm-shadow-blue);
+    box-shadow: 0 5px 15px var(--lm-shadow-primary);
 }
 
 .hamburger {
@@ -83,7 +90,7 @@ body {
 }
 
 .hamburger:hover {
-    background: var(--lm-medium-shadow-blue);
+    background: var(--lm-shadow-primary-medium);
 }
 
 .hamburger span {
@@ -122,7 +129,7 @@ body {
 /* Home Page Styles */
 .hero {
     text-align: center;
-    color: white;
+    color: var(--lm-dark-grey);
     padding: 4rem 0;
 }
 
@@ -142,9 +149,11 @@ body {
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-family: 'Cherry Cream Soda', cursive;
+    font-weight: 400;
+    font-size: 3.5rem;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px var(--lm-darker-shadow);
+    color: var(--lm-primary);
 }
 
 .hero .subtitle {
@@ -158,12 +167,14 @@ body {
     padding: 3rem;
     margin: 1rem 0;
     border-radius: 15px;
-    box-shadow: 0 10px 30px var(--lm-lighter-shadow);
+    /*box-shadow: 0 10px 30px var(--lm-lighter-shadow);*/
+    border: 2px solid var(--lm-dark-grey);
+    box-shadow: 6px 6px 0 var(--lm-dark-grey);
     backdrop-filter: blur(10px);
 }
 
 .bio h2 {
-    color: var(--lm-primary-blue);
+    color: var(--lm-primary-dark);
     margin-bottom: 1.5rem;
     font-size: 2rem;
 }
@@ -180,12 +191,13 @@ body {
     padding: 2rem;
     margin: 2rem 0;
     border-radius: 10px;
-    box-shadow: 0 5px 15px var(--lm-lighter-shadow);
+    border: 2px solid var(--lm-dark-grey);
+    box-shadow: 7px 7px 0 var(--lm-accent-sage-dark);
 }
 
 .cv-section h2 {
-    color: var(--lm-primary-blue);
-    border-bottom: 2px solid var(--lm-primary-blue);
+    color: var(--lm-primary-dark);
+    border-bottom: 2px solid var(--lm-primary);
     padding-bottom: 0.5rem;
     margin-bottom: 1.5rem;
 }
@@ -206,7 +218,7 @@ body {
 }
 
 .cv-item .date {
-    color: var(--lm-primary-blue);
+    color: var(--lm-accent-sage-dark);
     font-weight: bold;
     margin-bottom: 0.5rem;
 }
@@ -229,17 +241,19 @@ body {
     background: var(--lm-background-primary);
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 5px 15px var(--lm-lighter-shadow);
+    /*box-shadow: 0 5px 15px var(--lm-lighter-shadow);*/
+    border: 2px solid var(--lm-dark-grey);
+    box-shadow: 7px 7px 0 var(--lm-primary-dark);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px var(--lm-shadow-blue);
+    box-shadow: 0 10px 25px var(--lm-shadow-primary);
 }
 
 .project-card h3 {
-    color: var(--lm-primary-blue);
+    color: var(--lm-primary);
     margin-bottom: 1rem;
 }
 
@@ -251,8 +265,8 @@ body {
 }
 
 .tech-tag {
-    background: var(--lm-primary-blue);
-    color: white;
+    background: var(--lm-accent-rose-soft);
+    color: var(--lm-accent-rose-dark);
     padding: 0.2rem 0.8rem;
     border-radius: 15px;
     font-size: 0.8rem;
@@ -264,7 +278,7 @@ body {
 
 .project-link {
     display: inline-block;
-    background: var(--lm-primary-blue);
+    background: var(--lm-primary);
     color: white;
     padding: 0.5rem 1rem;
     text-decoration: none;
@@ -274,7 +288,7 @@ body {
 }
 
 .project-link:hover {
-    background: var(--lm-teritary-blue);
+    background: var(--lm-primary-dark);
 }
 
 /* Contact Page Styles */
@@ -289,7 +303,9 @@ body {
     background: var(--lm-background-primary);
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 5px 15px var(--lm-lighter-shadow);
+    /*box-shadow: 0 5px 15px var(--lm-lighter-shadow);*/
+    border: 2px solid var(--lm-dark-grey);
+    box-shadow: 7px 7px 0 var(--lm-accent-rose);
 }
 
 .contact-form {
@@ -304,12 +320,12 @@ body {
     align-items: center;
     margin-bottom: 1rem;
     padding: 1rem;
-    background: var(--lm-medium-shadow-blue);
+    background: var(--lm-shadow-primary-medium);
     border-radius: 8px;
 }
 
 .contact-item strong {
-    color: var(--lm-primary-blue);
+    color: var(--lm-primary);
     margin-right: 1rem;
 }
 
@@ -320,7 +336,7 @@ body {
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
-    color: var(--lm-primary-blue);
+    color: var(--lm-primary);
     font-weight: bold;
 }
 
@@ -337,11 +353,11 @@ body {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--lm-primary-blue);
+    border-color: var(--lm-primary);
 }
 
 .submit-btn {
-    background: var(--lm-primary-blue);
+    background: var(--lm-accent-rose);
     color: white;
     padding: 1rem 2rem;
     border: none;
@@ -352,15 +368,15 @@ body {
 }
 
 .submit-btn:hover {
-    background: var(--lm-teritary-blue);
+    background: var(--lm-accent-rose-dark);
 }
 
 .page-title {
+    font-family: 'Cherry Cream Soda', cursive;
     text-align: center;
-    color: white;
+    color: var(--lm-primary);
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    text-shadow: 2px 2px 4px var(--lm-darker-shadow);
 }
 
 /* Blog Styles */
@@ -383,7 +399,7 @@ body {
 }
 
 .blog-date {
-    color: black;
+    color: var(--lm-dark-grey);
     font-weight: bold;
     margin-bottom: 1rem;
     font-size: 1.1rem;
@@ -398,7 +414,7 @@ body {
 
 .blog-tag {
     background: var(--lm-background-secondary);
-    color: var(--lm-secondary-blue);
+    color: var(--lm-accent-rose-dark);
     padding: 0.3rem 0.8rem;
     margin-bottom: 2rem;
     border-radius: 15px;
@@ -414,21 +430,15 @@ body {
     backdrop-filter: blur(10px);
 }
 
-/*.blog-content title {*/
-/*    color: var(--lm-primary-blue);*/
-/*    margin: 2rem 0 1rem 0;*/
-/*    font-size: 2rem;*/
-/*}*/
-
 .blog-content h1 {
     font-size: 2rem;
-    color: var(--lm-primary-blue);
+    color: var(--lm-primary);
     margin: 0rem 0 1rem 0;
 }
 
 .blog-content h2 {
     font-size: 1.6rem;
-    color: var(--lm-primary-blue);
+    color: var(--lm-primary);
     margin: 1.5rem 0 1rem 0;
 }
 
@@ -445,10 +455,10 @@ body {
 }
 
 .blog-content blockquote {
-    border-left: 4px solid var(--lm-primary-blue);
+    border-left: 4px solid var(--lm-primary);
     padding: 1rem 1rem;
     margin: 2rem 0;
-    background: var(--lm-light-shadow-blue);
+    background: var(--lm-shadow-primary-light);
     border-radius: 0 8px 8px 0;
     font-style: italic;
 }
@@ -463,7 +473,7 @@ body {
     padding: 0.2rem 0.4rem;
     border-radius: 3px;
     font-family: 'Courier New', monospace;
-    color: var(--lm-primary-blue);
+    color: var(--lm-primary);
 }
 
 /* Code Block background*/
@@ -504,7 +514,7 @@ body {
 }
 
 .blog-nav-btn {
-    background: var(--lm-primary-blue);
+    background: var(--lm-primary);
     color: white;
     padding: 0.8rem 1.5rem;
     text-decoration: none;
@@ -514,7 +524,7 @@ body {
 }
 
 .blog-nav-btn:hover {
-    background: var(--lm-teritary-blue);
+    background: var(--lm-primary-dark);
 }
 
 .blog-nav-btn.disabled {
@@ -531,7 +541,7 @@ body {
 }
 
 .blog-list h2 {
-    color: var(--lm-primary-blue);
+    color: var(--lm-primary);
     margin-bottom: 1.5rem;
     text-align: center;
 }
@@ -546,11 +556,11 @@ body {
 
 .blog-item:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px var(--lm-medium-shadow-blue);
+    box-shadow: 0 5px 15px var(--lm-shadow-primary-medium);
 }
 
 .blog-item h3 {
-    color: var(--lm-primary-blue);
+    color: var(--lm-primary);
     margin-bottom: 0.5rem;
 }
 
@@ -560,17 +570,9 @@ body {
 }
 
 .blog-item .blog-read-more {
-    color: var(--lm-primary-blue);
+    color: var(--lm-primary);
     text-decoration: none;
     font-weight: bold;
-}
-
-.page-title {
-    text-align: center;
-    color: white;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    text-shadow: 2px 2px 4px var(--lm-darker-shadow);
 }
 
 .time-machine {
@@ -581,23 +583,24 @@ body {
 
 .year-selector {
     padding: 0.5rem 1rem;
-    border: 2px solid var(--lm-primary-blue);;
+    border: 2px solid var(--lm-primary);
     border-radius: 25px;
     background: white;
-    color: var(--lm-primary-blue);;
+    color: var(--lm-primary);
     cursor: pointer;
     transition: all 0.3s ease;
     font-weight: 600;
 }
 
 .year-selector:hover, .year-selector.active {
-    background: var(--lm-primary-blue);;
+    background: var(--lm-accent-rose);
+    border-color: var(--lm-accent-rose);
     color: white;
     transform: translateY(-2px);
 }
 
-featured-post {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+.featured-post {
+    background: linear-gradient(135deg, var(--lm-primary) 0%, var(--lm-primary-dark) 100%);
     border-radius: 20px;
     padding: 3rem;
     margin-bottom: 3rem;
@@ -627,7 +630,7 @@ featured-post {
 
 .featured-post:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 20px 40px var(--lm-shadow-primary);
 }
 
 .featured-badge {
@@ -695,7 +698,7 @@ featured-post {
         padding: 1rem;
         margin: 0.5rem 1rem;
         border-radius: 10px;
-        background: var(--lm-light-shadow-blue);
+        background: var(--lm-shadow-primary-light);
         transform: translateX(-100px);
         opacity: 0;
         animation: slideIn 0.3s ease forwards;

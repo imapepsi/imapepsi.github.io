@@ -1,32 +1,45 @@
 /*
 colors.css
 
+Powder and Rose — vintage 1950s-60s pastel palette
 lm = light mode
 dm = dark mode
 */
 
 :root {
-  --lm-primary-blue: #0F75BD;
-  --lm-secondary-blue: #1A9FD4;
-  --lm-teritary-blue: #0A2494;
+  /* Powder blue — the dominant brand color: nav, links, headings, gradient */
+  --lm-primary: #5C86A1;
+  --lm-primary-light: #96BDD9;
+  --lm-primary-dark: #2F4D69;
 
-  --lm-dark-grey: #333333;
-  --lm-grey: #666666;
-  --lm-light-grey: #CCCCCC;
-  --lm-off-white: #EEEEEE;
-  --lm-white: #F8F8F8;
+  /* Dusty rose — the signature accent, used sparingly: buttons, tags, active states */
+  --lm-accent-rose: #BD6E78;
+  --lm-accent-rose-dark: #A65861;
+  --lm-accent-rose-soft: #E8C9CD;
 
+  /* Sage green — second accent, kept to its own role: blog tags and meta text */
+  --lm-accent-sage: #94B36D;
+  --lm-accent-sage-dark: #689450;
+  --lm-accent-sage-soft: #D4E3B6;
 
-  --lm-background-secondary: rgba(26, 159, 212, 0.1);
-  --lm-background-primary: rgba(255, 255, 255, 0.95);
-  --lm-lighter-shadow: rgba(0, 0, 0, 0.1);
-  --lm-darker-shadow: rgba(0, 0, 0, 0.3);
+  /* Flat page background — a warm sand tone for the cream cards to sit on */
+  --lm-page-bg: #F5EEDD;
 
+  /* Warm neutrals — cream instead of stark white, brown-toned ink instead of black */
+  --lm-dark-grey: #3E362E; /* Ink color */
+  --lm-grey: #6B6259;
+  --lm-light-grey: #DDD4C4;
+  --lm-off-white: #F5EEDD;
+  --lm-white: #FBF6EC;
 
-  --lm-shadow-blue: rgba(15, 117, 189, 0.3);
-  --lm-medium-shadow-blue: rgba(15, 117, 189, 0.1);
-  --lm-light-shadow-blue: rgba(15, 117, 189, 0.06);
+  --lm-background-secondary: rgba(189, 110, 120, 0.1);
+  --lm-background-primary: rgba(255, 253, 250, 0.95);
+  --lm-lighter-shadow: rgba(62, 54, 46, 0.1);
+  --lm-darker-shadow: rgba(45, 38, 32, 0.3);
 
-  --lm-image-border: rgba(255, 255, 255, 0.3);
+  --lm-shadow-primary: rgba(93, 124, 144, 0.3);
+  --lm-shadow-primary-medium: rgba(93, 124, 144, 0.1);
+  --lm-shadow-primary-light: rgba(93, 124, 144, 0.06);
 
+  --lm-image-border: rgba(251, 246, 236, 0.4);
 }

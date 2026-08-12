@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog test</title>
-  <link href="styles/main.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog test</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Cream+Soda&family=Montserrat&display=swap" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
 </head>
 <body>
 
@@ -19,10 +22,10 @@
     <div class="blog-layout">
         <div class="side-column">
             <div class="blog-navigation">
-                <span style="color: var(--lm-primary-blue); font-weight: 600;">Time Machine:</span>
+                <span style="color: var(--lm-primary); font-weight: 600;">Time Machine:</span>
                 <div class="time-machine">
-                    <div class="year-selector active" onclick="filterByYear(2025)">2025</div>
-                    <div class="year-selector" onclick="filterByYear(2024)">2024</div>
+                    <div class="year-selector active" onclick="filterByYear(2026)">2026</div>
+                    <div class="year-selector" onclick="filterByYear(2025)">2025</div>
                     <div class="year-selector" onclick="filterByYear('all')">All</div>
                 </div>
 
@@ -58,3 +61,17 @@
 </body>
 </html>
 
+<!--
+
+    {
+      "slug": "year-one",
+      "file": "2026-09-01.md",
+      "title": "Year One in Review",
+      "date": "September 1, 2026",
+      "dateSort": "2026-09-01",
+      "author": "Mia McGuire",
+      "tags": ["Personal", "PhD", "Motherhood"],
+      "excerpt": "What I've learned so far"
+    }
+
+-->
