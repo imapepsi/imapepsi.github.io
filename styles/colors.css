@@ -17,10 +17,14 @@ dm = dark mode
   --lm-accent-rose-dark: #A65861;
   --lm-accent-rose-soft: #E8C9CD;
 
-  /* Sage green — second accent, kept to its own role: blog tags and meta text */
+  /* Sage green — second accent*/
   --lm-accent-sage: #94B36D;
   --lm-accent-sage-dark: #689450;
   --lm-accent-sage-soft: #D4E3B6;
+
+  --lm-accent-gold: #D3A44B;
+  --lm-accent-gold-dark: #A67C2E;
+  --lm-accent-gold-soft: #F0DBA8;
 
   /* Flat page background — a warm sand tone for the cream cards to sit on */
   --lm-page-bg: #F5EEDD;

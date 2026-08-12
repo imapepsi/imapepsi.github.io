@@ -73,11 +73,20 @@ body {
     overflow: hidden;
 }
 
-.nav-link:hover, .nav-link.active {
-    background: linear-gradient(45deg, var(--lm-accent-rose), var(--lm-accent-rose-dark));
-    color: white;
+.nav-link:hover {
+    color: var(--lm-dark-grey);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px var(--lm-shadow-primary);
+    border-radius: 20px;
+    border: 3px solid var(--lm-dark-grey);
+    box-shadow: 0 10px 25px var(--lm-shadow-primary);
+}
+
+
+.nav-link.active {
+    color: var(--lm-dark-grey);
+    transform: translateY(-2px);
+    border-radius: 20px;
+    border: 3px solid var(--lm-dark-grey);
 }
 
 .hamburger {
@@ -167,7 +176,6 @@ body {
     padding: 3rem;
     margin: 1rem 0;
     border-radius: 15px;
-    /*box-shadow: 0 10px 30px var(--lm-lighter-shadow);*/
     border: 2px solid var(--lm-dark-grey);
     box-shadow: 6px 6px 0 var(--lm-dark-grey);
     backdrop-filter: blur(10px);
@@ -426,7 +434,8 @@ body {
     padding: 3rem;
     margin: 2rem 0;
     border-radius: 15px;
-    box-shadow: 0 10px 30px var(--lm-lighter-shadow);
+    border: 2px solid var(--lm-dark-grey);
+    box-shadow: 7px 7px 0 var(--lm-accent-gold);
     backdrop-filter: blur(10px);
 }
 
@@ -506,7 +515,8 @@ body {
     padding: 2rem;
     margin: 2rem 0;
     border-radius: 10px;
-    box-shadow: 0 5px 15px var(--lm-lighter-shadow);
+    border: 2px solid var(--lm-dark-grey);
+    box-shadow: 5px 5px 0 var(--lm-accent-gold);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -537,7 +547,8 @@ body {
     padding: 2rem;
     margin: 2rem 0;
     border-radius: 10px;
-    box-shadow: 0 5px 15px var(--lm-lighter-shadow);
+    border: 2px solid var(--lm-dark-grey);
+    box-shadow: 5px 5px 0 var(--lm-accent-gold);
 }
 
 .blog-list h2 {
