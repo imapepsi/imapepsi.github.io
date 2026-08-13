@@ -1,0 +1,3 @@
+# Lesson 00: Setting Up Python
+
+Coming soon ...

@@ -1,11 +1,18 @@
-# Lesson: Input & Output in Python
+# Lesson 01: Input & Output in Python
 
 ## Reading
 
-Today we're going to learn about two essential Python functions: print() and input(). These two functions are the 
-foundation of how we communicate with a computer: how we give it information and how it gives information back to us.
+In this lesson we're going to learn about two essential Python functions: `print()` and `input()`. These two functions 
+are the foundation of how we communicate with a computer: how we give it information and how it gives information back 
+to us.
 
-### **The `print()` Function**
+### Setting Up
+
+1. Open the Python Shell app: `IDLE.app`
+2. Click `File` in the file bar and click `New File` to create a new python file
+3. Save this file as `lesson01.py` in any folder you'd like to keep your python scripts/programs
+
+### The `print()` Function
 
 Computers can perform tasks at incredible speed, but that's only useful if we can see the results. The `print()` function 
 tells the computer to display information in a window called the **console**.
@@ -18,7 +25,12 @@ print("Hello World")
 
 This tells the computer to display the phrase `Hello World` in the console.
 
-**🛠️ Try it:** In your example.py file, type print("Hello World"), then click the green **Run** button.
+> **🛠️ Try it:** 
+> 
+> Type `print("Hello World")` in your `lesson01.py` file.
+> 
+> To run your program you can use the keyboard shortcut: `F5` (may need to click `fn` + `F5` key if on Mac).
+> You can also click `Run` in the menu bar and then `Run Module`
 
 Congratulations! You just wrote your first Python program\! 🎉
 
@@ -27,31 +39,30 @@ maybe in another language!
 
 Follow these steps:
 
-1\. Type `print`
+1. Type `print`
+2. Open parenthesis `(`
+3. Double quote `"`
+4. Your greeting
+5. Closing double quote `"`
+6. Closing parenthesis `)`
 
-2\. Open parenthesis `(`
-
-3\. Double quote `"`
-
-4\. Your greeting
-
-5\. Closing double quote `"`
-
-6\. Closing parenthesis `)`
-
-### **The `input()` Function**
+### The `input()` Function
 
 Now that we can display information, we also need a way to **collect** information from the user. The `input()` function 
 displays a prompt in the console and waits for the user to type a response and press **Enter**.
 
-**🛠️ Try it:** In your example.py file type the following and run it:
+> **🛠️ Try it:** 
+> 
+> In your `lesson01.py` file type the following and run it:
+> 
+> ```python
+> input("What is your favorite snack? ")
+> ```
 
-```python
-input("What is your favorite snack? ")
-```
 
-**💡 Notice:** There's an extra space before the closing quote. Try removing it and running the program again. See how 
-it affects what appears in the console.
+
+> **💡 Notice:** There's an extra space before the closing quote. Try removing it and running the program again. See how 
+> it affects what appears in the console.
 
 ### **Variables**
 
@@ -86,8 +97,10 @@ Or we can use it inside a sentence:
 print("I love " + snack + " too!")
 ```
 
-**💡 Notice:** There's a space at the end of `"I love "` and a space at the beginning of  `" too!"`. Python won't add 
-spaces automatically, if we leave them out, this is what we'd get:
+> **💡 Notice:** 
+> 
+> There's a space at the end of `"I love "` and a space at the beginning of  `" too!"`. Python won't add 
+> spaces automatically, if we leave them out, this is what we'd get:
 
 ```python
 I lovepopcorntoo!
@@ -97,7 +110,9 @@ Programming languages don't have the ability to guess what we want. We have to b
 
 Being specific about spacing is an important habit in programming\!
 
-**🛠️ Try it:** Write your own print statement that uses the snack variable in a creative response.
+> **🛠️ Try it:** 
+> 
+> Write your own print statement that uses the snack variable in a creative response.
 
 One final note on variables: values assigned to variables can be easily reassigned at any time. For example:
 
@@ -114,16 +129,17 @@ of num at that point in the code.
 
 ### **Recap (Vocab & Code Syntax)**
 
-| Vocab | Definition |
-| ----- | ----- |
+| Vocab    | Definition                                                                                                                                                                                                    |
+|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Variable | Stores information so your program can use it. Its value can be reassigned at any time. It can have a name starting with a letter or underscore and can contain letters, numbers, or underscores (no spaces). |
-| Console | Window where our program runs |
+| Console  | Window where our program runs                                                                                                                                                                                 |
 
-| Code | What it does | Example Usage                 |
-| ----- | ----- |-------------------------------|
-| print() | Displays information to the user | `print("Howdy")`           |
-| input() | Collects information from the user | `input("Enter a number: ")`    |
-| Variable | Stores information | `name = input("Enter your name: ")` |
+
+| Code       | What it does                       | Example Usage                       |
+|------------|------------------------------------|-------------------------------------|
+| `print()`  | Displays information to the user   | `print("Howdy")`                    |
+| `input()`  | Collects information from the user | `input("Enter a number: ")`         |
+| `Variable` | Stores information                 | `name = input("Enter your name: ")` |
 
 ---
 
@@ -131,30 +147,31 @@ of num at that point in the code.
 
 ### **Overview**
 
-Now it's time to put everything together\! In this exercise, you'll write a short Python program that has a conversation with the user. Your program will ask the user a series of questions, save their answers, and respond to each one before moving on to the next question.
+Now it's time to put everything together\! In this exercise, you'll write a short Python program that has a conversation 
+with the user. Your program will ask the user a series of questions, save their answers, and respond to each one before 
+moving on to the next question.
 
 This exercise practices all three concepts from today's lesson: `print()`, `input()`, and **variables**.
 
 ### **Requirements**
 
-In your main.py file, write a program that does the following:
+Create a new file called `lesson01-exercise.py`. In this file, write a program that does the following:
 
 1. Ask for the user's name: save it to a variable, then print a friendly response that uses their name.
 2. Ask for the user's favorite movie: save it to a variable, then print a response that includes the movie title.
 3. Ask a question of your own choosing: save the answer to a variable, then print a response that uses it.
 4. You may include other questions and responses of your choice.
 
-### **Example:**
+### **Example Output**
 
-```python
-name = input("What is your name? ")
+Here's some example output for the first requirement (step):
+
+```plaintext
+What is your name? Mia
+Nice to meet you, Mia!
 ```
 
-```python
-print("Nice to meet you, " + name + "!")
-```
-
-#### **Keep in String:**
+#### **Keep in Mind:**
 
 - Each answer should be saved to its own variable with a meaningful name.
 - Each response should be printed **before** the next question is asked.
