@@ -477,28 +477,37 @@ body {
     padding: 0;
 }
 
+/*.blog-content code {*/
+/*    background: var(--lm-white);*/
+/*    padding: 0.2rem 0.4rem;*/
+/*    border-radius: 3px;*/
+/*    font-family: 'Courier New', monospace;*/
+/*    color: var(--lm-primary);*/
+/*}*/
+
 .blog-content code {
-    background: var(--lm-white);
-    padding: 0.2rem 0.4rem;
-    border-radius: 3px;
+    background: #f4f4f4;
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
     font-family: 'Courier New', monospace;
-    color: var(--lm-primary);
+    /* no color here! let inline code inherit body text color */
 }
 
 /* Code Block background*/
 .blog-content pre {
-    background: #f8f8f8;
-    padding: 1.5rem;
+    /*background: #f8f8f8;*/
+    background-color: #282C32;
+
+    padding: 0.5em 1em;
     border-radius: 8px;
     overflow-x: auto;
     margin: 1.5rem 0;
     border: 1px solid var(--lm-light-grey);
 }
 
-.blog-content pre code {
-    background: none;
-    padding: 0;
-    color: var(--lm-dark-grey);
+.blog-content pre code.hljs {
+    background: transparent; /* let the pre's background show through */
+    font-size: 1.1rem;
 }
 
 .blog-content ul, .blog-content ol {
@@ -677,6 +686,35 @@ body {
     font-size: 1.1rem;
     line-height: 1.7;
     opacity: 0.95;
+}
+
+
+/* CV/Resume Page Styles */
+.learning-section {
+    background: var(--lm-background-primary);
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 10px;
+    border: 2px solid var(--lm-dark-grey);
+    box-shadow: 7px 7px 0 var(--lm-dark-grey);
+}
+
+.article-tag-link {
+    background: var(--lm-accent-sage-soft);
+    color: var(--lm-accent-sage-dark);
+    padding: 0.2rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+}
+
+.article-tag-link a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.article-tag-link:hover {
+    color: inherit;
+    box-shadow: 0 10px 25px var(--lm-shadow-primary);
 }
 
 /* Mobile Styles */

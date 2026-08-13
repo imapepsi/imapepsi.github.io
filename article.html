@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn CS - Article</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Cream+Soda&family=Montserrat&display=swap" rel="stylesheet">
+
+    <link href="styles/main.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.2/marked.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+</head>
+<body>
+<navigation-component></navigation-component>
+
+<div id="articleContainer" class="page active">
+    <p>Loading...</p>
+</div>
+
+<script src="components/hamburger-menu.js"></script>
+<script src="components/navigation.js"></script>
+<script>
+    marked.setOptions({
+        highlight: function(code, lang) {
+            if (lang && hljs.getLanguage(lang)) {
+                return hljs.highlight(code, { language: lang }).value;
+            }
+            return hljs.highlightAuto(code).value;
+        }
+    });
+
+    async function loadArticle() {
+        const params = new URLSearchParams(window.location.search);
+        const path = params.get('src');
+        const container = document.getElementById('articleContainer');
+
+        if (!path) {
+            container.innerHTML = '<p>No article specified.</p>';
+            return;
+        }
+
+        try {
+            const response = await fetch(path);
+            if (!response.ok) throw new Error(`Failed to load: ${response.status}`);
+            const markdown = await response.text();
+            container.innerHTML = `<div class="blog-content">${marked.parse(markdown)}</div>`;
+
+            // Highlight any code blocks after insertion
+            container.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightElement(block);
+            });
+        } catch (err) {
+            container.innerHTML = `<p>Error loading article: ${err.message}</p>`;
+        }
+    }
+
+    window.addEventListener('load', loadArticle);
+</script>
+</body>
+</html>
