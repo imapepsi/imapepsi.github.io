@@ -7,6 +7,8 @@ dm = dark mode
 */
 
 :root {
+  /* ============ LIGHT MODE ============ */
+
   /* Powder blue — the dominant brand color: nav, links, headings, gradient */
   --lm-primary: #5C86A1;
   --lm-primary-light: #96BDD9;
@@ -46,4 +48,147 @@ dm = dark mode
   --lm-shadow-primary-light: rgba(93, 124, 144, 0.06);
 
   --lm-image-border: rgba(251, 246, 236, 0.4);
+
+
+  --lm-code-inline-bg: #E3E3E3;
+  --lm-code-inline-text: #3E362E;
+  --lm-code-block-bg: #282C32;
+  --lm-table-border: #DDDDDD;
+
+  /* ============ DARK MODE ============ */
+
+  /* Powder blue — lightened so it stays legible/vivid on a dark ground */
+  --dm-primary: #7FA6C2;
+  --dm-primary-light: #A9CBE0;
+  --dm-primary-dark: #3D5F78;
+
+  /* Dusty rose — lightened for legibility; soft variant becomes a dark tint */
+  --dm-accent-rose: #CC8891;
+  --dm-accent-rose-dark: #A6636D;
+  --dm-accent-rose-soft: #4A2E33;
+
+  /* Sage green */
+  --dm-accent-sage: #A8C285;
+  --dm-accent-sage-dark: #7C9C5C;
+  --dm-accent-sage-soft: #33402A;
+
+  --dm-accent-gold: #DDB876;
+  --dm-accent-gold-dark: #B0904F;
+  --dm-accent-gold-soft: #3D3320;
+
+  /* Warm charcoal, not neutral black — keeps the vintage warmth */
+  --dm-page-bg: #1C1914;
+
+  /* Warm neutrals inverted — cream ink on dark, not stark white */
+  --dm-dark-grey: #EDE6D8; /* Ink color */
+  --dm-grey: #A69C8C;
+  --dm-light-grey: #453E34;
+  --dm-off-white: #1C1914;
+  --dm-white: #2A251E; /* card/surface elevation above page bg */
+
+  --dm-background-secondary: rgba(204, 136, 145, 0.12);
+  --dm-background-primary: rgba(30, 26, 20, 0.92);
+  --dm-lighter-shadow: rgba(0, 0, 0, 0.3);
+  --dm-darker-shadow: rgba(0, 0, 0, 0.55);
+
+  --dm-shadow-primary: rgba(127, 166, 194, 0.25);
+  --dm-shadow-primary-medium: rgba(127, 166, 194, 0.12);
+  --dm-shadow-primary-light: rgba(127, 166, 194, 0.06);
+
+  --dm-image-border: rgba(237, 230, 216, 0.15);
+
+  --dm-code-inline-bg: #2E2A24;
+  --dm-code-inline-text: #EDE6D8;
+  --dm-code-block-bg: #1A1D22; /* slightly darker than page-bg so it still reads as a distinct block */
+  --dm-table-border: #453E34;
+
+  /* ============ SEMANTIC LAYER ============ */
+  /* main.css should only ever reference these — never lm-/dm- directly */
+
+  --primary: var(--lm-primary);
+  --primary-light: var(--lm-primary-light);
+  --primary-dark: var(--lm-primary-dark);
+
+  --accent-rose: var(--lm-accent-rose);
+  --accent-rose-dark: var(--lm-accent-rose-dark);
+  --accent-rose-soft: var(--lm-accent-rose-soft);
+
+  --accent-sage: var(--lm-accent-sage);
+  --accent-sage-dark: var(--lm-accent-sage-dark);
+  --accent-sage-soft: var(--lm-accent-sage-soft);
+
+  --accent-gold: var(--lm-accent-gold);
+  --accent-gold-dark: var(--lm-accent-gold-dark);
+  --accent-gold-soft: var(--lm-accent-gold-soft);
+
+  --page-bg: var(--lm-page-bg);
+
+  --ink: var(--lm-dark-grey);
+  --grey: var(--lm-grey);
+  --light-grey: var(--lm-light-grey);
+  --off-white: var(--lm-off-white);
+  --white: var(--lm-white);
+
+  --background-secondary: var(--lm-background-secondary);
+  --background-primary: var(--lm-background-primary);
+  --lighter-shadow: var(--lm-lighter-shadow);
+  --darker-shadow: var(--lm-darker-shadow);
+
+  --shadow-primary: var(--lm-shadow-primary);
+  --shadow-primary-medium: var(--lm-shadow-primary-medium);
+  --shadow-primary-light: var(--lm-shadow-primary-light);
+
+  --image-border: var(--lm-image-border);
+
+  --code-inline-bg: var(--lm-code-inline-bg);
+  --code-inline-text: var(--lm-code-inline-text);
+  --code-block-bg: var(--lm-code-block-bg);
+  --table-border: var(--lm-table-border);
+
+  --code-block-text: #E8E6E0;
+
+}
+
+[data-theme="dark"] {
+  --primary: var(--dm-primary);
+  --primary-light: var(--dm-primary-light);
+  --primary-dark: var(--dm-primary-dark);
+
+  --accent-rose: var(--dm-accent-rose);
+  --accent-rose-dark: var(--dm-accent-rose-dark);
+  --accent-rose-soft: var(--dm-accent-rose-soft);
+
+  --accent-sage: var(--dm-accent-sage);
+  --accent-sage-dark: var(--dm-accent-sage-dark);
+  --accent-sage-soft: var(--dm-accent-sage-soft);
+
+  --accent-gold: var(--dm-accent-gold);
+  --accent-gold-dark: var(--dm-accent-gold-dark);
+  --accent-gold-soft: var(--dm-accent-gold-soft);
+
+  --page-bg: var(--dm-page-bg);
+
+  --ink: var(--dm-dark-grey);
+  --grey: var(--dm-grey);
+  --light-grey: var(--dm-light-grey);
+  --off-white: var(--dm-off-white);
+  --white: var(--dm-white);
+
+  --background-secondary: var(--dm-background-secondary);
+  --background-primary: var(--dm-background-primary);
+  --lighter-shadow: var(--dm-lighter-shadow);
+  --darker-shadow: var(--dm-darker-shadow);
+
+  --shadow-primary: var(--dm-shadow-primary);
+  --shadow-primary-medium: var(--dm-shadow-primary-medium);
+  --shadow-primary-light: var(--dm-shadow-primary-light);
+
+  --image-border: var(--dm-image-border);
+
+  --code-inline-bg: var(--dm-code-inline-bg);
+  --code-inline-text: var(--dm-code-inline-text);
+  --code-block-bg: var(--dm-code-block-bg);
+  --table-border: var(--dm-table-border);
+
+  /*--code-block-text: #E8E6E0;*/
 }

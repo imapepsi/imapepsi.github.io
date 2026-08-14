@@ -9,6 +9,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Cherry+Cream+Soda&family=Montserrat&display=swap" rel="stylesheet">
 
     <link href="styles/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer" />
+    <script>
+        (function() {
+            const saved = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (saved === 'dark' || (!saved && prefersDark)) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
 </head>
 <body>
 <navigation-component></navigation-component>
@@ -17,27 +27,40 @@
     <h1 class="page-title">Learn CS</h1>
     <div class="">
         <div class="bio">
-            </p>
-            <p> I have about two and a half years of experience as a Teaching Assistant, primarily supporting introductory
+            <p>
+                I have about two and a half years of experience as a Teaching Assistant, primarily supporting introductory
                 computer science courses including BYU's: CS111 Intro to Computer Science, CS226: Discrete Structures, and
                 CS202: Lab Intro to Software Engineering.
-
-                Through these roles, I’ve had the opportunity to work closely with students who are encountering computer
-                science concepts for the first time. This experience has given me a strong foundation in programming and
-                Computer Science and an appreciation for clear, approachable explanations.
-
-                I hope this can be a helpful resource for those interested in this field.
-
-                Each Lesson includes a reading, a coding exercise, and a section for parents with little kids at home.
             </p>
+            <p>
+                Through these roles, I’ve had the opportunity to work closely with students who are encountering CS
+                concepts for the first time. This experience has given me a strong foundation in programming and CS and
+                an appreciation for clear, approachable explanations. I hope this page can be a helpful resource for those
+                interested in this field.
+            </p>
+
         </div>
 
         <div class="learning-section">
-            <h3>Intro to Python</h3>
-            <p>Learn the basics of programming in Python</p>
-            <div class="project-tech">
+            <h2>Intro to Python</h2>
+            <p> Each Lesson includes a reading, a coding exercise, and a section for parents with little kids at home.</p>
+            <div class="article-link-list">
                 <span class="article-tag-link"><a href="article.html?src=learn_cs/python/00-setup.md">Lesson 00</a></span>
-                <span class="article-tag-link"><a href="article.html?src=learn_cs/python/01-consoleIO.md">Lesson 01</a></span>
+                <span class="article-tag-link"><a href="article.html?src=learn_cs/python/01-console-IO.md">Lesson 01</a></span>
+                <span class="article-tag-link"><a href="article.html?src=learn_cs/python/02-data-types.md">Lesson 02</a></span>
+
+            </div>
+        </div>
+
+        <div class="learning-section">
+            <h2>Git/Github Commands</h2>
+            <p>
+                These are guides for setting up and using the version control software Git and connecting to the
+                cloud-based hosting platform Github.
+            </p>
+            <div class="article-link-list">
+                <span class="article-tag-link"><a href="article.html?src=learn_cs/github/setting-up-github.md">GitHub Setup</a></span>
+                <span class="article-tag-link"><a href="article.html?src=learn_cs/github/git-commands.md">Git Commands</a></span>
             </div>
         </div>
 

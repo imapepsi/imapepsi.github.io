@@ -171,7 +171,7 @@ What is your name? Mia
 Nice to meet you, Mia!
 ```
 
-#### **Keep in Mind:**
+### **Keep in Mind:**
 
 - Each answer should be saved to its own variable with a meaningful name.
 - Each response should be printed **before** the next question is asked.
