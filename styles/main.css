@@ -23,7 +23,7 @@ body {
 }
 
 .indented-list {
-    padding-left: 40px; /* or try margin-left: 20px */
+    list-style-position: inside;
 }
 
 .navbar {

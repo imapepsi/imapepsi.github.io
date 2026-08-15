@@ -1,4 +1,4 @@
-# Lesson: Data Types, Type Conversion & String Formatting
+# Lesson 02: Data Types, Type Conversion & String Formatting
 
 ## Reading
 
@@ -183,7 +183,7 @@ year = int(input("Enter the current year: "))
 print(f"Your birth year is {year - age}")
 ```
 
-## **Recap**
+### Recap
 
 | Vocab           | Definition                                                  |
 |-----------------|-------------------------------------------------------------|
@@ -206,14 +206,14 @@ print(f"Your birth year is {year - age}")
 
 ## Code Exercise
 
-### **Overview**
+### Overview
 
 Now it's time to put everything together! In this exercise you'll write a Python program that collects information from 
 a user, works with different data types, and displays responses using f-strings.
 
 This exercise practices all three concepts from today's lesson: data types, type conversion, and string formatting.
 
-### **Requirements**
+### Requirements
 
 Create a new file called `lesson02-exercise.py`. In this file, write a program that does the following:
 
@@ -221,7 +221,7 @@ Create a new file called `lesson02-exercise.py`. In this file, write a program t
 2. Ask for the price of their favorite snack. Convert it to a float, then print a response that tells them how much two of that snack would cost.
 3. You may include other questions and responses of your choice.
 
-### **Keep in mind:**
+### Keep in mind:
 
 - Always convert `input()` values to the right number type before doing math with them.
 - Use f-strings to make your print statements clean and easy to read.
@@ -234,7 +234,7 @@ Create a new file called `lesson02-exercise.py`. In this file, write a program t
 One of the best parts of learning to code as a parent is that you have a built-in study friend at home.  If you have a 
 toddler, try one of these activities to reinforce what you just learned.
 
-## **Age 2: Sorting Game**
+### Age 2: Sorting Game
 
 Concepts: data types
 
@@ -242,7 +242,7 @@ Gather a mix of objects from around the house, some soft toys, some hard blocks,
 Sort them into piles together. Just like Python puts values into categories (numbers, words, true/false), your toddler 
 is sorting things into their own types. Name the categories out loud as you go.
 
-## **Age 3: Telephone Operator Game**
+### Age 3: Telephone Operator Game
 
 Concepts: type conversion
 
@@ -250,7 +250,7 @@ Play pretend telephone. Your toddler whispers a message to a stuffed animal, the
 in a funny voice, and you say it back in your normal voice. Each step is a conversion, the same information moving from 
 one form to another, just like int() or str() in Python.
 
-## **Age 4: Mad Libs**
+### Age 4: Mad Libs
 
 Concepts: string formatting
 
@@ -258,7 +258,7 @@ Tell a silly story out loud with blanks in it. Ask your child to shout out words
 went to the {place} and ate {food}!" That's exactly how an f-string works: a sentence with spots reserved for variables. 
 Let them make the story as ridiculous as possible!
 
-## **Have Older Kids? Teach Them Too!**
+### Have Older Kids? Teach Them Too!
 
 If you have older children who are able to type, invite them to sit with you and try writing the code themselves! Walk 
 them through what you just learned, show them how different data types work, what happens when you try to add a number 
