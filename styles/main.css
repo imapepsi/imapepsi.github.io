@@ -443,25 +443,31 @@ body {
 }
 
 .blog-content h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: var(--primary);
     margin: 0rem 0 1rem 0;
 }
 
 .blog-content h2 {
-    font-size: 1.6rem;
+    font-size: 2.25rem;
     color: var(--primary);
     margin: 1.5rem 0 1rem 0;
 }
 
 .blog-content h3 {
-    font-size: 1.2rem;
+    font-size: 1.75rem;
+    color: var(--ink);
+    margin: 1.2rem 0 1rem 0;
+}
+
+.blog-content h4 {
+    font-size: 1.25rem;
     color: var(--ink);
     margin: 1.2rem 0 1rem 0;
 }
 
 .blog-content p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.8;
     margin-bottom: 1.5rem;
 }
@@ -502,6 +508,12 @@ body {
     background: transparent;
     color: var(--code-block-text);
     font-size: 1rem;
+}
+
+.blog-content pre code.hljs .hljs-comment,
+.blog-content pre code.hljs .hljs-quote {
+    color: var(--code-comment);
+    font-style: italic;
 }
 
 .blog-content table {

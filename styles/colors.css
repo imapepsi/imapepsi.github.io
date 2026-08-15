@@ -54,6 +54,8 @@ dm = dark mode
   --lm-code-inline-text: #3E362E;
   --lm-code-block-bg: #282C32;
   --lm-table-border: #DDDDDD;
+  --lm-code-comment: #96BDD9;
+
 
   /* ============ DARK MODE ============ */
 
@@ -143,6 +145,8 @@ dm = dark mode
   --code-inline-bg: var(--lm-code-inline-bg);
   --code-inline-text: var(--lm-code-inline-text);
   --code-block-bg: var(--lm-code-block-bg);
+  --code-comment: var(--lm-code-comment);
+
   --table-border: var(--lm-table-border);
 
   --code-block-text: #E8E6E0;

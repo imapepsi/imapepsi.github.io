@@ -14,7 +14,9 @@ true/false answer.
 
 ### Data Types
 
-Every piece of information in Python has a data type. A data type tells Python what kind of value something is and what it can do with it. Think of it like the difference between a phone number and a price, both are numbers, but you wouldn't try to multiply a phone number.
+Every piece of information in Python has a data type. A data type tells Python what kind of value something is and what 
+it can do with it. Think of it like the difference between a phone number and a price, both are numbers, but you wouldn't 
+try to multiply a phone number.
 
 Here are the four most common data types you'll use:
 
